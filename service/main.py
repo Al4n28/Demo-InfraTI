@@ -11,7 +11,7 @@ def index():
         "message":"Hola Titi"
     }
 
-@app.get("/character/{id}", response_model=model)
+@app.get("/photo/{id}", response_model=model)
 async def personajeGetter(id:int):
     personaje = await api_data.get_personajeByID(id)
     return personaje.dict()
